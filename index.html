@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/50ba960c66.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+          colors: {
+            body: '#F9F9F9',
+            darkBrown: '#472D2D',
+            brown: '#553939',
+            lightBrown: '#704F4F',
+            lightB: '#A77979',
+          },
+        },
+      };
+    </script>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Count down</title>
+  </head>
+  <body class="bg-body">
+    <audio src="./sounds/sound.mp3" id="sound"></audio>
+    <div
+      id="mainDiv"
+      class="lg:w-6/12 w-11/12 mx-auto bg-darkBrown mt-[5rem] h-[20rem] rounded-xl shadow-xl flex items-center justify-center"
+    >
+      <div class="flex flex-col items-center gap-12 justify-center">
+        <div
+          class="flex gap-4 text-[2.5rem] font-bold text-[#A77979] bg-brown px-6 shadow-xl rounded-xl"
+        >
+          <h2 id="minute">00</h2>
+          <span>:</span>
+          <h2 id="second">00</h2>
+        </div>
+        <form
+          id="form"
+          class="flex flex w-8/12 gap-4 items-center justify-center"
+        >
+          <input
+            type="number"
+            class="text-center w-2/12 h-[3rem] rounded-xl bg-[#A77979] outline-0 text-[1.5rem] p-2"
+            placeholder="M"
+            id="minVal"
+          />
+          <input
+            type="number"
+            class="text-center w-2/12 h-[3rem] rounded-xl bg-[#A77979] outline-0 text-[1.5rem] p-2"
+            placeholder="S"
+            id="secVal"
+          />
+        </form>
+        <div class="flex gap-4">
+          <button
+            id="startBtn"
+            class="text-[#A77979] w-[6rem] h-[3rem] bg-brown rounded-xl shadow-xl font-bold text-[1.1rem]"
+          >
+            Start
+          </button>
+          <button
+            id="stopBtn"
+            class="text-[#A77979] w-[6rem] h-[3rem] bg-brown rounded-xl shadow-xl font-bold text-[1.1rem]"
+          >
+            Stop
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

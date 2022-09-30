@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: #f9f9f9;
+}
+
+.pump {
+  animation: pump 1s linear infinite;
+}
+@keyframes pump {
+  from {
+    background-color: rgb(156, 36, 36);
+  }
+}
